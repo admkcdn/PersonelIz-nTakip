@@ -1,0 +1,426 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5209B379-225C-4120-AD2D-69B6E86596BB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PersonelIzınTakip</RootNamespace>
+    <AssemblyName>PersonelIzınTakip</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44392</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="PersonelLogin.aspx" />
+    <Content Include="Talepler.aspx" />
+    <Content Include="TalepOnayla.aspx" />
+    <Content Include="TalepReddet.aspx" />
+    <Content Include="web4\css\style.css" />
+    <Content Include="web4\images\bg.jpg" />
+    <Content Include="web4\images\lo-bg.png" />
+    <Content Include="web4\index.html" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="FreeStyle.aspx" />
+    <Content Include="izinEkle.aspx" />
+    <Content Include="Izinler.aspx" />
+    <Content Include="KisiBilgi.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="SilPersonel.aspx" />
+    <Content Include="starter\assets\css\style-starter.css" />
+    <Content Include="starter\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="starter\assets\images\a1.jpg" />
+    <Content Include="starter\assets\images\a2.jpg" />
+    <Content Include="starter\assets\images\a3.jpg" />
+    <Content Include="starter\assets\images\ad.jpg" />
+    <Content Include="starter\assets\images\beauty.jpg" />
+    <Content Include="starter\assets\images\beauty1.jpg" />
+    <Content Include="starter\assets\images\beauty10.jpg" />
+    <Content Include="starter\assets\images\beauty2.jpg" />
+    <Content Include="starter\assets\images\beauty3.jpg" />
+    <Content Include="starter\assets\images\beauty4.jpg" />
+    <Content Include="starter\assets\images\beauty5.jpg" />
+    <Content Include="starter\assets\images\beauty6.jpg" />
+    <Content Include="starter\assets\images\beauty7.jpg" />
+    <Content Include="starter\assets\images\beauty8.jpg" />
+    <Content Include="starter\assets\images\beauty9.jpg" />
+    <Content Include="starter\assets\images\blogsingle.jpg" />
+    <Content Include="starter\assets\images\fashion.jpg" />
+    <Content Include="starter\assets\images\fashion1.jpg" />
+    <Content Include="starter\assets\images\fashion2.jpg" />
+    <Content Include="starter\assets\images\fashion3.jpg" />
+    <Content Include="starter\assets\images\fashion4.jpg" />
+    <Content Include="starter\assets\images\fashion5.jpg" />
+    <Content Include="starter\assets\images\fashion6.jpg" />
+    <Content Include="starter\assets\images\fashion7.jpg" />
+    <Content Include="starter\assets\images\fashion8.jpg" />
+    <Content Include="starter\assets\images\food.jpg" />
+    <Content Include="starter\assets\images\image1.jpg" />
+    <Content Include="starter\assets\images\image2.jpg" />
+    <Content Include="starter\assets\images\lifestyle.jpg" />
+    <Content Include="starter\assets\images\pic1.jpg" />
+    <Content Include="starter\assets\images\pic2.jpg" />
+    <Content Include="starter\assets\images\pic3.jpg" />
+    <Content Include="starter\assets\images\trending1.jpg" />
+    <Content Include="starter\assets\images\trending2.jpg" />
+    <Content Include="starter\assets\js\bootstrap.min.js" />
+    <Content Include="starter\assets\js\jquery-3.3.1.min.js" />
+    <Content Include="starter\assets\js\owl.carousel.js" />
+    <Content Include="starter\assets\js\theme-change.js" />
+    <Content Include="starter\beauty.html" />
+    <Content Include="starter\contact.html" />
+    <Content Include="starter\fashion.html" />
+    <Content Include="starter\index.html" />
+    <Content Include="starter\starter-license-W3Layouts.txt" />
+    <Content Include="web2\css\font-awesome.css" />
+    <Content Include="web2\css\monthly.css" />
+    <Content Include="web2\css\style.css" />
+    <Content Include="web2\fonts\fontawesome-webfont.svg" />
+    <Content Include="web2\images\bg.jpg" />
+    <Content Include="web2\images\bgp.jpg" />
+    <Content Include="web2\images\pro.jpg" />
+    <Content Include="web2\images\tick.png" />
+    <Content Include="web2\index.html" />
+    <Content Include="web2\js\jquery-2.1.4.min.js" />
+    <Content Include="web2\js\monthly.js" />
+    <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="web3\css\style.css" />
+    <Content Include="web3\images\bg.jpg" />
+    <Content Include="web3\index.html" />
+    <Content Include="web3\w3layouts-License.txt" />
+    <Content Include="web\css\style.css" />
+    <Content Include="web\images\bg-left.png" />
+    <Content Include="web\images\bg.jpg" />
+    <Content Include="web\images\ch-tick.png" />
+    <Content Include="web\images\dot.png" />
+    <Content Include="web\images\main--bg.png" />
+    <Content Include="web\images\sign-cor.png" />
+    <Content Include="web\images\tick.png" />
+    <Content Include="web\images\user-icon.png" />
+    <Content Include="web\index.html" />
+    <Content Include="PersonelKayit.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FreeStyle.aspx.cs">
+      <DependentUpon>FreeStyle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FreeStyle.aspx.designer.cs">
+      <DependentUpon>FreeStyle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="izinEkle.aspx.cs">
+      <DependentUpon>izinEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="izinEkle.aspx.designer.cs">
+      <DependentUpon>izinEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Izinler.aspx.cs">
+      <DependentUpon>Izinler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Izinler.aspx.designer.cs">
+      <DependentUpon>Izinler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Izinler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KisiBilgi.aspx.cs">
+      <DependentUpon>KisiBilgi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KisiBilgi.aspx.designer.cs">
+      <DependentUpon>KisiBilgi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelKayit.aspx.cs">
+      <DependentUpon>PersonelKayit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonelKayit.aspx.designer.cs">
+      <DependentUpon>PersonelKayit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personeller.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelLogin.aspx.cs">
+      <DependentUpon>PersonelLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonelLogin.aspx.designer.cs">
+      <DependentUpon>PersonelLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SilPersonel.aspx.cs">
+      <DependentUpon>SilPersonel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SilPersonel.aspx.designer.cs">
+      <DependentUpon>SilPersonel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Talepler.aspx.cs">
+      <DependentUpon>Talepler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Talepler.aspx.designer.cs">
+      <DependentUpon>Talepler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TalepOnayla.aspx.cs">
+      <DependentUpon>TalepOnayla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TalepOnayla.aspx.designer.cs">
+      <DependentUpon>TalepOnayla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TalepReddet.aspx.cs">
+      <DependentUpon>TalepReddet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TalepReddet.aspx.designer.cs">
+      <DependentUpon>TalepReddet.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\images\Thumbs.db" />
+    <Content Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="web4\images\Thumbs.db" />
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="starter\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="starter\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="starter\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="starter\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="starter\assets\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="web2\fonts\fontawesome-webfont.eot" />
+    <Content Include="web2\fonts\fontawesome-webfont.ttf" />
+    <Content Include="web2\fonts\fontawesome-webfont.woff" />
+    <Content Include="web2\fonts\fontawesome-webfont.woff2" />
+    <Content Include="web2\fonts\FontAwesome.otf" />
+    <Content Include="web2\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="web2\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="web2\images\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59259</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44392/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
